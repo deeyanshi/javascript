@@ -256,3 +256,7 @@ let obj1={a:1};
 Object.assign(obj1,{a:2},{b:2});
 console.log(obj1);
 // answer={ a: 2, b: 2 }
+
+
+//helloooo
+
