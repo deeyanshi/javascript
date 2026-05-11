@@ -1,0 +1,528 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>what can javascript do?</h2>
+    <p id="demo">java script can change HTML content</p>
+    <button type="button"
+    onclick='document.getElementById("demo").innerHTML ="hello java script!"'>click me!</button>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>what can javascript do?</h2>
+    <p id="demo">java script can change the style of an HTML element</p>
+    <button type="button"
+    onclick="document.getElementById('demo').style.fontSize='35px'">click me!</button>
+</body>
+</html> -->
+
+
+
+
+
+<!-- 
+<head>
+<title>Bulb ON OFF</title>
+</head>
+<body>
+<h2>JavaScript Bulb ON/OFF</h2>
+<img id="bulb" src="https://www.w3school.com/js/pic_bulboff.giff" width="150">
+<br><br>
+<button onclick="bulbOn()">Turn ON</button>
+<button onclick="bulbOff()">Turn OFF</button>
+<script>
+    function bulbOn(){
+        document.getElementById("bulb").src ="https://www.w3schools.com/js/pic_bulbon.gif";
+    }
+    function bulbOff(){
+        document.getElementById("bulb").src ="https://www.w3schools.com/js/pic_bulboff.gif";
+    }
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+<button type="button" onclick="document.write(5+6)">Try it</button>
+</body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Else If Statement</title>
+    </head>
+    <body>
+        <h3>Grade Example</h3>
+        <script>
+        let marks =100;
+        if (marks>=90)
+        {document.write("GRADE A")}
+        else if(marks>=60)
+        {document.write("GRADE B")}
+        else
+        {document.write("GRADE C")}
+        </script>
+    </body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h2>Login Page</h2>
+        <input type="text" id="user" placeholder="Username"><br><br>
+        <input type="password" id="pass" placeholder="password"><br><br>
+        <button onclick="login()">Login</button>
+        <p id="msg"></p>
+    </body>
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h2>Login Page</h2>
+        <input type="text" id="user" placeholder="Username"><br><br>
+        <input type="password" id="pass" placeholder="password"><br><br>
+        <button onclick="login()">Login</button>
+        <p id="msg"></p>
+        <script>
+            function login(){
+                let u = document.getElementById("user").value;
+                let p = document.getElementById("pass").value;
+            
+            if(u=="admin" && p=="123")
+            {document.getElementById("msg").innerHTML="login successful🤗";}
+            else 
+            {document.getElementById("msg").innerHTML="invalid credentials🤕";}
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Digital Clock</title>
+    </head>
+    <body>
+        <h2>Digital Clock</h2>
+        <h1 id ="clock"></h1>
+        <script>
+            setInterval(showTime,1000);
+            function showTime()
+            {let time = new Date();
+                document.getElementById("clock").innerHTML= time.toLocaleTimeString();
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Change</title>
+    </head>
+    <body>
+        <h2>Change Background Color</h2>
+        <button onclick="changeColor()">Change</button>
+        <script>
+            function changeColor()
+            {let colors = ["red","green","blue","yellow","pink"];
+                let random= Math.floor(Math.random()*colors.length);
+                document.body.style.backgroundColor = colors[random];
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Attempts</title>
+    </head>
+    <body>
+        <h2>3 Attempts allowed</h2>
+        <input type="password" id="pwd">
+        <button onclick="check()">submit</button>
+        <p id="msg"></p>
+        <script>
+            let Attempts=0;
+            function check()
+            {
+            Attempts++;
+            if(document.getElementById("pwd").value ==='admin')
+            {document.getElementById("msg").innerHTML="acess granted";}
+            else if(Attempts<3)
+            {document.getElementById("msg").innerHTML="wrong password,attempts left:" + (3 - Attempts);}
+            else
+            {document.getElementById("msg").innerHTML="account locked";}
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Function</title>
+    </head>
+    <body>
+        <h3>Open Console to See Output</h3>
+        <script>
+            let x=10;
+            function showA(){
+                let a=5;
+                console.log("function Declaration:a=",a);
+            };
+            const showB = function(){
+                let b=15;
+                console.log("function Experssion:b=",b);
+            };
+            const showC =()=>{
+                let c=25;
+                console.log("arrow function:c=",c);
+            };
+            showA();
+            showB();
+            showC();
+        </script>
+    </body>
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            const person={
+                name: "Lakshay",
+                greet: function (){
+                    console.log("hello, my name is" + this.name);
+                }
+            };
+            person.greet();
+        </script>
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Chocolate Day 🍫</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #3e2723, #6d4c41);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        button {
+            background: #d7a86e;
+            color: #3e2723;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #f5c16c;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🍫 Happy Chocolate Day 🍫</h1>
+    <p id="wish">
+        You’re sweeter than chocolate and more precious than gold 💖
+    </p>
+    <button onclick="changeWish()">New Wish</button>
+    <div class="footer">Made with 🤎</div>
+</div>
+
+<script>
+    const wishes = [
+        "Life is sweeter with chocolates and you 🍫❤️",
+        "Chocolate understands feelings better than words 🤎",
+        "You are my favorite flavor forever 😌🍫",
+        "Sending you a box full of love and chocolates 💝",
+        "Because every sweet moment starts with chocolate 🍫✨"
+    ];
+
+    function changeWish() {
+        const randomIndex = Math.floor(Math.random() * wishes.length);
+        document.getElementById("wish").innerText = wishes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
+
+
+
+ -->
+
+<!-- 
+ <!DOCTYPE html>
+<html>
+<body>
+    <h2>Call by Value Example in JavaScript</h2>
+    <p id="before"></p>
+    <p id="inside"></p>
+    <p id="after"></p>
+    <button onclick="updateMarket()">Update Marks</button>
+    </script>
+        function changeMarks(marks){
+            marks=95;
+            document.getElementById("inside").innerHTML="Marks inside function:"+ marks;}
+        function updateMarks() {
+            let studentMarks =80u
+        }
+    </body>
+</html> --> 
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Theme changer</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial;
+                transition: 0.5s;
+            }
+            button {
+                padding: 10px 15px;
+                margin: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Dynamic theme change</h2>
+        <button onclick="changeColor()">Change background Color</button>
+        <button onclick="toggleMode()">dark/light mode</button>
+        <script>
+            function getRandomcolor(){
+                let letters='0123456789ABCDEF';
+                let color='#';
+                for(let i=0;i<6;i++){
+                    color+=letters[Math.floor(Math.random()*16)];
+                }
+                return color;
+                function changeColor(){
+                    document.body.style.backgroundColor=getRandomcolor();
+                }
+                function toggleMode(){
+                    if(document.body.style.backgroundColor==="black"){
+                        document.body.style.backgroundColor="white";
+                        document.body.style.color="black";
+                    } else {
+                        document.body.style.backgroundColor="black";
+                        document.body.style.color="white";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+function greet(name,callback){
+    console.log("hello"+name);
+    callback();
+
+}
+
+
+
+
+function counter(){
+    let count ==0;
+    return{
+        increment: function(){
+            count++;
+            console.log(log)
+        }
+    }
+}
+
+<!-- 
+
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>
+            Read HTML Content
+        </title>
+    </head>
+    <body>
+        <h2>Javascript DOM - Read Content</h2>
+        <p id="'demo">Hello G10ains</p>
+        <button onclick="readContent()">Read Content</button>
+        <script>
+            function readContent()
+            {
+                //Read HTML content
+                let text=document.getElementById("demo").innerHTML;
+                //print in console
+                console.log(text);
+                //also show on screen
+                alert
+            }
+        </script>
+    </body>
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html> 
+<html>
+    <head>
+        <title>
+            Change HTML Content
+        </title>
+    </head>
+    <body>
+        
+        <h2>Window Obeject Demo</h2>
+        <button onclick="testWindow()">Click Me</button>
+        <script>
+            function testWindow(){
+                alert("Welcome!");
+                let name =prompt("enter your name:");
+                if(name!=null){
+                    let confirmMsg=confirm("Is your name "+ name +"?");
+                    if(confirmMsg){
+                        let newWin=window.open("https://google.com","_blank");
+                        setTimeout(()=>{
+                            newWin.close();
+                        },3000);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>  -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html> 
+<html>
+    <head>
+        <title>
+            Change HTML Content
+        </title>
+    </head>
+    <body>
+        
+        <h2>Window Obeject Demo</h2>
+        <button onclick="getInfo()">Click Me</button>
+        <script>
+            function getInfo(){
+                alert("Browser:" + navigator.appName+
+                    "/nVersion:"+navigator.appVersion+
+                    "/nPlatform:"+navigator.platform+
+                    "/nLanguage:"+navigator.language+
+                    "/nOnline"+navigator.onLine
+                );
+            }
+        </script>
+    </body>
+</html> -->
+
+
